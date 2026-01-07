@@ -5,18 +5,140 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f0f0f0;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);
+    font-family: 'Fredoka One', cursive;
 }
 
 #dialog {
     position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #8B4513;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    animation: popup-appear 1s ease-out;
+}
+
+@keyframes popup-appear {
+    0% {
+        transform: scale(0.8) translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+#popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#sun-icon {
+    font-size: 2em;
+    margin-right: 10px;
+    animation: sun-rotate 2s linear infinite;
+}
+
+@keyframes sun-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #8B4513;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1em;
+    color: #2F4F2F;
+    margin: 20px 0;
 }
 
 #okButton {
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    border: 2px solid #8B4513;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1.2em;
+    color: #8B4513;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#okButton:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, #FFA500, #FFD700);
+}
+
+#world-elements {
     margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#farm-elements span {
+    margin: 0 5px;
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+#farm-elements span:nth-child(2) { animation-delay: 0.2s; }
+#farm-elements span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+#experience-popup {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #8B4513;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#popup-content h2 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+#popup-content h3 {
+    color: #2F4F2F;
+}
+
+#popup-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#close-popup {
+    background: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#close-popup:hover {
+    background: #654321;
 }

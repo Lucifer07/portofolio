@@ -1,0 +1,8 @@
+Model Information:
+* title:	The Ivy bush house
+* source:	https://sketchfab.com/3d-models/the-ivy-bush-house-073be0499d894f2eac9c6076acfaec46
+* author:	Katydid (https://sketchfab.com/Katydid.)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
